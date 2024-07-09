@@ -1,0 +1,15 @@
+Name:   Jianyi Lu
+SID:    520400438
+Unikey: jilu4724
+
+**Test Cases**
+Table 1. Summary of test cases for parse_pulse_sequence
+| File Name                   | Function Name   | Description                                                             | Expected Error Message(s) (if any)                                                            | Pass/Fail |
+| ---------------------       | ----------------| ------------------------------------------------------------------------| ----------------------------------                                                            | --------- |
+| pos_pulse_sequence_1.in     | positive_test_1 | Positive Case - Configure the frequency and direction for 3 emitters    | 1. Error: emitter 'A' already has its pulse sequence set 2. Error: emitter 'D' does not exist | Pass      |
+| pos_pulse_sequence_2.in     | positive_test_2 | Positive Case - Configure the frequency and direction for 3 emitters    |                                                                                               | Pass      |
+| neg_pulse_sequence_1.in     | negative_test_1 | Negative Case - Invalid symbols                                         | Error: symbol is not between A-J                                                              | Pass      |
+| neg_pulse_sequence_2.in     | negative_test_2 | Negative Case - Invalid frequencies                                     | 1. Error: frequency must be greater than zero 2. Error: frequency is not an integer.          | Pass      |
+| neg_pulse_sequence_3.in     | negative_test_3 | Negative Case - Invalid directions                                      | Error: direction must be 'N', 'E', 'S' or 'W'                                                 | Pass      |
+| edge_pulse_sequence_1.in    |   edge_test_1   | Edge Case - No input for some pulse sequence parameters emitter A       | Error: <symbol> <frequency> <direction>                                                       | Pass      |
+| edge_pulse_sequence_2.in    |   edge_test_2   | Edge Case - No input at all                                             |                                                                                               | Pass      |
